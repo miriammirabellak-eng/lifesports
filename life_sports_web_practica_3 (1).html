@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Life Sports — Salud y Bienestar Integral</title>
+  <meta name="description" content="Life Sports - Equipamiento y servicios deportivos enfocados en la salud física y mental. Creado por Miriam Mirabella." />
+  <style>
+    :root{
+      --bg:#f8fbff;
+      --card:#ffffff;
+      --accent:#4da6ff; /* azul suave */
+      --accent-2:#86c5ff; /* azul claro */
+      --muted:#6b7280;
+      --radius:12px;
+      --shadow: 0 6px 20px rgba(8,20,40,0.08);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0f172a;line-height:1.45}
+    header{background:linear-gradient(90deg, rgba(77,166,255,0.08), rgba(134,197,255,0.06));backdrop-filter: blur(3px);padding:20px 28px;position:sticky;top:0;z-index:40}
+    .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{margin-left:18px;color:#063250;text-decoration:none;font-weight:600}
+    .hero{max-width:1100px;margin:28px auto;display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;padding:0 18px}
+    .card{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+
+    h1{font-size:30px;margin:0 0 8px;color:#003366}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta{display:flex;gap:12px}
+    .btn{background:var(--accent);color:white;padding:10px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn.secondary{background:transparent;color:var(--accent);border:2px solid rgba(77,166,255,0.3)}
+
+    section{max-width:1100px;margin:18px auto;padding:0 18px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .product{padding:14px;border-radius:12px;background:var(--card);box-shadow:var(--shadow)}
+    .product img{width:100%;border-radius:10px;height:180px;object-fit:cover}
+    .pinfo h3{margin:8px 0 0;font-size:17px;color:#003366}
+    .price{color:var(--accent);font-weight:800}
+    .muted{color:var(--muted);font-size:13px}
+
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    form input, form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef0;margin-top:8px}
+    footer{margin-top:28px;padding:24px 18px;background:transparent;display:flex;justify-content:center}
+
+    @media (max-width:980px){.hero{grid-template-columns:1fr} .grid{grid-template-columns:repeat(2,1fr)} .two-col{grid-template-columns:1fr}}
+    @media (max-width:620px){.grid{grid-template-columns:1fr} nav a{display:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo">LS</div>
+        <div>
+          <div style="font-weight:800;color:#003366">Life Sports</div>
+          <div style="font-size:13px;color:var(--muted)">Salud · Bienestar · Rendimiento</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos/Servicios</a>
+        <a href="#historia">Nuestra historia</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="card">
+        <h1>Entrena tu cuerpo, cuida tu mente.</h1>
+        <p class="lead">En Life Sports creemos que el equilibrio entre cuerpo y mente es la clave del bienestar. Ofrecemos equipamiento deportivo y servicios personalizados para que alcances tus objetivos de salud física y mental.</p>
+        <div class="cta">
+          <button class="btn" onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">Ver productos</button>
+          <button class="btn secondary" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Contactar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos">
+      <h2>Productos y Servicios</h2>
+      <div class="grid">
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=60" alt="Pesas y mancuernas" />
+          <div class="pinfo">
+            <h3>Set de Pesas y Mancuernas</h3>
+            <p class="muted">Equipamiento profesional ajustable, ideal para entrenamiento en casa o gimnasio.</p>
+            <div class="price">129 €</div>
+          </div>
+        </article>
+
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=800&q=60" alt="Esterillas y bandas elásticas" />
+          <div class="pinfo">
+            <h3>Esterillas y Bandas Elásticas</h3>
+            <p class="muted">Confort, resistencia y durabilidad para tu entrenamiento diario.</p>
+            <div class="price">39 €</div>
+          </div>
+        </article>
+
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-1579758629936-0b6c0b39b7f4?auto=format&fit=crop&w=800&q=60" alt="Reloj deportivo" />
+          <div class="pinfo">
+            <h3>Relojes y Pulsómetros</h3>
+            <p class="muted">Controla tu rendimiento con precisión y estilo.</p>
+            <div class="price">159 €</div>
+          </div>
+        </article>
+
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-1618209833969-1e86c1f97e64?auto=format&fit=crop&w=800&q=60" alt="Balones de entrenamiento" />
+          <div class="pinfo">
+            <h3>Balones de Entrenamiento</h3>
+            <p class="muted">Diseño ergonómico y antideslizante para sesiones seguras.</p>
+            <div class="price">29 €</div>
+          </div>
+        </article>
+
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-1600180758890-6b94519f1c98?auto=format&fit=crop&w=800&q=60" alt="Accesorios tecnológicos" />
+          <div class="pinfo">
+            <h3>Accesorios Tecnológicos</h3>
+            <p class="muted">Sensores, relojes inteligentes y apps de seguimiento.</p>
+            <div class="price">Desde 49 €</div>
+          </div>
+        </article>
+
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-1586015555751-63b121b0c2b4?auto=format&fit=crop&w=800&q=60" alt="Funda deportiva para móvil" />
+          <div class="pinfo">
+            <h3>Fundas Deportivas</h3>
+            <p class="muted">Guarda tu móvil con comodidad mientras entrenas.</p>
+            <div class="price">14 €</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="historia">
+      <h2>Nuestra Historia</h2>
+      <div class="two-col">
+        <div class="card">
+          <p class="lead">Life Sports nació con una visión clara: motivar a las personas a cuidar de su cuerpo y su mente. Creemos que el bienestar físico y mental van de la mano, y trabajamos para que cada producto inspire hábitos saludables y una vida más equilibrada.</p>
+
+          <h4>Misión</h4>
+          <p class="muted">Crecer como empresa en base a las necesidades de cada cliente, ofreciendo soluciones reales para su bienestar.</p>
+
+          <h4>Visión</h4>
+          <p class="muted">Ser un referente en salud y deporte, ayudando a que más personas encuentren su equilibrio físico y mental.</p>
+
+          <h4>Valores</h4>
+          <ul class="muted">
+            <li>Respeto y compromiso</li>
+            <li>Motivación constante</li>
+            <li>Innovación responsable</li>
+            <li>Atención al cliente personalizada</li>
+          </ul>
+        </div>
+
+        <div class="card" id="contacto">
+          <h3>Contacto</h3>
+          <p class="muted">Departamento de recepción y consultas: estaremos encantados de atenderte y resolver tus dudas.</p>
+          <form onsubmit="event.preventDefault();alert('Gracias por tu mensaje. Este formulario es de ejemplo.')">
+            <label>Nombre</label>
+            <input type="text" placeholder="Tu nombre" required />
+            <label>Email</label>
+            <input type="email" placeholder="tu@correo.com" required />
+            <label>Consulta</label>
+            <textarea rows="4" placeholder="Escribe tu consulta..."></textarea>
+            <button class="btn" type="submit">Enviar</button>
+          </form>
+
+          <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+            Email: consultas@lifesports.com<br />Teléfono: +34 600 000 000<br />Atención de lunes a viernes, 9:00–18:00.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="max-width:1100px;width:100%;display:flex;justify-content:space-between;align-items:center;gap:12px">
+        <div style="font-size:13px;color:var(--muted)">© 2025 Life Sports · Creado por <strong>Miriam Mirabella</strong></div>
+        <div style="font-size:13px;color:var(--muted)">Salud, bienestar y motivación diaria</div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
